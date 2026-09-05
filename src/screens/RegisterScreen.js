@@ -25,7 +25,7 @@ export default function RegisterScreen({ navigation }) {
   const [tocados, setTocados] = useState({});
 
   // useMemo recalcula os erros toda vez que um valor muda —
-  // isso É a "validação em tempo real" pedida no PDF.
+  // isso É a "validação em tempo real"
   const erros = useMemo(() => {
     return {
       nomeCompleto: validarNomeCompleto(nomeCompleto)

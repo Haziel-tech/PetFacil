@@ -1,10 +1,10 @@
 import React, { createContext, useState, useContext } from 'react';
 
-// 1. Cria o "canal" de contexto. Ele começa vazio; quem dá vida a ele
+//    Cria o "canal" de contexto. Ele começa vazio; quem dá vida a ele
 //    é o <CartProvider> lá embaixo.
 const CartContext = createContext(null);
 
-// 2. O Provider é um componente que "embrulha" o app inteiro (ou parte
+//     O Provider é um componente que "embrulha" o app inteiro (ou parte
 //    dele) e disponibiliza o estado do carrinho para qualquer tela
 //    dentro dele, sem precisar passar props manualmente tela por tela
 //    (isso se chama "prop drilling" e o Context existe pra evitar).
@@ -12,7 +12,7 @@ export function CartProvider({ children }) {
   const [itens, setItens] = useState([]); // cada item = um produto no carrinho
 
   function adicionarAoCarrinho(produto) {
-    // RF04: a cada seleção, o carrinho é incrementado com o novo item.
+    // a cada seleção, o carrinho é incrementado com o novo item.
     // Aqui cada "toque" gera uma nova entrada na lista (mesmo que o
     // produto já esteja lá), como o documento descreve.
     setItens((atual) => [
@@ -22,7 +22,7 @@ export function CartProvider({ children }) {
   }
 
   function removerDoCarrinho(itemId) {
-    // RF06: remover um item específico.
+    // remover um item específico.
     setItens((atual) => atual.filter((item) => item.itemId !== itemId));
   }
 
@@ -37,7 +37,7 @@ export function CartProvider({ children }) {
     }, 0);
   }
 
-  // 3. "value" é o que fica disponível para qualquer tela que usar
+  //    "value" é o que fica disponível para qualquer tela que usar
   //    useCart() (definido abaixo).
   const value = {
     itens,
@@ -52,7 +52,7 @@ export function CartProvider({ children }) {
   );
 }
 
-// 4. Hook customizado: em vez de toda tela escrever
+//     Hook customizado: em vez de toda tela escrever
 //    "useContext(CartContext)", ela só chama "useCart()".
 //    Mais limpo e fácil de ler.
 export function useCart() {

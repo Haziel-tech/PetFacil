@@ -1,10 +1,6 @@
 import React from 'react';
 import { View, TextInput, Text, StyleSheet } from 'react-native';
 
-// Campo de texto genérico com label e mensagem de erro opcional.
-// A validação em tempo real (pedida no PDF) funciona assim:
-// a TELA calcula se há erro e passa isso via prop "error";
-// este componente só EXIBE o erro, não decide a regra de validação.
 export default function Input({ label, value, onChangeText, error, ...rest }) {
   return (
     <View style={styles.container}>
@@ -48,3 +44,8 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
 });
+
+
+// Campo de texto genérico com label e mensagem de erro opcional.
+// a TELA calcula se há erro e passa isso via prop "error";
+// este componente só EXIBE o erro, não decide a regra de validação.

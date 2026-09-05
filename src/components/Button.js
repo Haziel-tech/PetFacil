@@ -1,9 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
-// Componente genérico de botão. Recebe "variant" para mudar a cor
-// sem precisar duplicar o componente inteiro (ex: botão principal
-// verde, botão secundário laranja).
 export default function Button({ title, onPress, variant = 'primary', disabled = false }) {
   return (
     <TouchableOpacity
@@ -40,3 +37,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
 });
+
+// Componente genérico de botão. Recebe "variant" para mudar a cor
+// sem precisar duplicar o componente inteiro (ex: botão principal
+// verde, botão secundário laranja).

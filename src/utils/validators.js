@@ -20,9 +20,10 @@ export function senhasConferem(senha, repetirSenha) {
   return senha === repetirSenha && senha.length > 0;
 }
 
+
 // Validação de CPF com dígitos verificadores (é isso que o PDF
 // pede: "aceitar apenas um CPF válido, dígitos verificadores conferem").
-//
+
 // Como funciona, passo a passo:
 // 1. Remove tudo que não é número (pontos, traços).
 // 2. Descarta CPFs com todos os dígitos iguais (111.111.111-11 é

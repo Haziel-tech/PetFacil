@@ -1,7 +1,3 @@
-// Dados simulados de produtos (fase 1 - sem back-end).
-// Cada produto segue EXATAMENTE os atributos definidos no documento:
-// nome, precoAtual, precoPromocional, tipo, descricao, dataValidade.
-
 export const mockProducts = [
   {
     id: '1',
@@ -58,3 +54,7 @@ export const mockProducts = [
     dataValidade: null,
   },
 ];
+
+// Dados simulados de produtos (fase 1 - sem back-end).
+// Cada produto segue EXATAMENTE os atributos definidos no documento:
+// nome, precoAtual, precoPromocional, tipo, descricao, dataValidade.

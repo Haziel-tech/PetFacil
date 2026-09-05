@@ -5,10 +5,10 @@ const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
   const [usuarioLogado, setUsuarioLogado] = useState(null);
-  const [compras, setCompras] = useState([]); // histórico de compras (RF08)
+  const [compras, setCompras] = useState([]); // histórico de compras
 
   function login(loginInput, senhaInput) {
-    // RF02: autenticação simulada, sem token/back-end.
+    // autenticação simulada, sem token/back-end.
     const usuario = autenticarUsuario(loginInput, senhaInput);
     if (usuario) {
       setUsuarioLogado(usuario);
@@ -27,7 +27,7 @@ export function AuthProvider({ children }) {
   }
 
   function registrarCompras(itensDoCarrinho) {
-    // RF08: uma compra é gerada PARA CADA PRODUTO do carrinho.
+    // uma compra é gerada PARA CADA PRODUTO do carrinho.
     // Cada compra tem SOMENTE: nome do produto, preço e data da compra.
     const novasCompras = itensDoCarrinho.map((item) => ({
       nomeProduto: item.nome,

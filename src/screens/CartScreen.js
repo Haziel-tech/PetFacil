@@ -11,7 +11,7 @@ export default function CartScreen({ navigation }) {
   const { registrarCompras } = useAuth();
 
   function handleFinalizar() {
-    // RF07 + RF08: finaliza o pedido e gera uma compra por produto.
+    // finaliza o pedido e gera uma compra por produto.
     registrarCompras(itens);
     limparCarrinho();
     navigation.navigate('PedidoFinalizado');

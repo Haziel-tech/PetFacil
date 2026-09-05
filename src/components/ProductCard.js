@@ -2,10 +2,6 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { formatCurrency } from '../utils/formatCurrency';
 
-// Card de produto usado na lista (RF03) e que dispara duas ações:
-// - onPress: abre o detalhe do produto
-// - onAddToCart: adiciona direto ao carrinho (RF04), sem precisar
-//   entrar no detalhe — atalho comum em apps de compra.
 export default function ProductCard({ product, onPress, onAddToCart }) {
   const temPromocao = product.precoPromocional != null;
 
@@ -139,3 +135,8 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
 });
+
+
+// - onPress: abre o detalhe do produto
+// - onAddToCart: adiciona direto ao carrinho (RF04), sem precisar
+//   entrar no detalhe — atalho comum em apps de compra.

@@ -58,9 +58,3 @@ src/
 | RF07 | Finalizar pedido | `CartScreen.js` |
 | RF08 | Registrar compra | `AuthContext.js` (`registrarCompras`) |
 | RF09 | Assistente com IA | pasta `assistant/` |
-
-## Próxima fase
-
-Na Fase 2, os arquivos `data/mockProducts.js` e `data/mockUsers.js` serão
-substituídos por chamadas reais a uma API, com banco de dados, autenticação
-por token e senhas criptografadas.
